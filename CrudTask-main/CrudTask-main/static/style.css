@@ -1,0 +1,149 @@
+* {
+    box-sizing: border-box;
+    font-family: "Inter", "Segoe UI", Arial, sans-serif;
+}
+
+body {
+    background: #f4f6f8;
+    margin: 0;
+    padding: 40px;
+    color: #333;
+}
+
+/* CONTAINER */
+.container {
+    max-width: 720px;
+    margin: auto;
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 10px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.08);
+}
+
+h1 {
+    text-align: center;
+    font-size: 26px;
+    margin-bottom: 25px;
+    color: #222;
+}
+
+/* LINKS */
+a {
+    text-decoration: none;
+}
+
+/* ADD LINK */
+.add-link {
+    display: inline-block;
+    margin-bottom: 20px;
+    color: #4f46e5;
+    font-weight: 500;
+}
+
+/* ---------- FORMS ---------- */
+form {
+    display: flex;
+    flex-direction: column;   /* ✅ FIX */
+    gap: 14px;
+    margin-bottom: 25px;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #d1d5db;
+    font-size: 14px;
+}
+
+form input:focus {
+    outline: none;
+    border-color: #4f46e5;
+}
+
+form button {
+    background: #4f46e5;
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+form button:hover {
+    background: #4338ca;
+}
+
+/* ---------- TASK CARD ---------- */
+.task {
+    background: #f9fafb;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.task.done {
+    background: #ecfdf5;
+    text-decoration: line-through;
+    color: #555;
+}
+
+.task-title {
+    font-weight: 600;
+    font-size: 15px;
+}
+
+.task-desc {
+    font-size: 13px;
+    color: #6b7280;
+    margin-top: 4px;
+}
+
+/* ---------- ACTION BUTTONS ---------- */
+.actions a {
+    margin-left: 8px;
+    padding: 6px 10px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.toggle {
+    background: #0ea5e9;
+    color: white;
+}
+
+.edit {
+    background: #f59e0b;
+    color: #111;
+}
+
+.delete {
+    background: #ef4444;
+    color: white;
+}
+
+.toggle:hover { background: #0284c7; }
+.edit:hover { background: #d97706; }
+.delete:hover { background: #dc2626; }
+
+/* FOOTER */
+.footer {
+    text-align: center;
+    margin-top: 30px;
+    font-size: 13px;
+    color: #9ca3af;
+}
+
+/* BACK LINK */
+.back {
+    display: inline-block;
+    margin-top: 15px;
+    color: #4f46e5;
+    font-weight: 500;
+}

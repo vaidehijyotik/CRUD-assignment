@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Task Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+
+<div class="container">
+    <h1>Task Manager</h1>
+
+    <!-- ADD TASK -->
+    <a href="{{ url_for('add') }}" class="add-link">Add task</a>
+
+    {% for task in tasks %}
+    <div class="task {% if task.done %}done{% endif %}">
+        <div>
+            <div class="task-title">{{ task.title }}</div>
+            <div class="task-desc">{{ task.description }}</div>
+        </div>
+
+        <div class="actions">
+            <a class="toggle" href="{{ url_for('toggle', id=task.id) }}">Done</a>
+            <a class="edit" href="{{ url_for('edit', id=task.id) }}">Edit</a>
+            <a class="delete"
+               href="{{ url_for('delete', id=task.id) }}"
+               onclick="return confirm('Remove this task?')">
+               Delete
+            </a>
+        </div>
+    </div>
+    {% endfor %}
+
+    <div class="footer">
+        Built with Flask • Task tracking application
+    </div>
+</div>
+
+</body>
+</html>
